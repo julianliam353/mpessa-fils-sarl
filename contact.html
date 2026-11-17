@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#28286A">
+
+    <title>Contact | MPESSA FILS SARL</title>
+
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="Logo MPESSA FILS SARL">
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html">Accueil</a>
+                <a href="services.html">Services</a>
+                <a href="galerie.html">Réalisations</a>
+                <a href="formations.html">Formations</a>
+                <a href="apropos.html">À propos</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- BANNIÈRE -->
+    <section class="contact-hero">
+
+        <div class="contact-overlay"></div>
+
+        <div class="contact-hero-content">
+
+            <span>NOUS SOMMES À VOTRE ÉCOUTE</span>
+
+            <h1>Parlons de votre projet.</h1>
+
+            <p>
+                Une question, une idée ou un événement à organiser ?
+                Parlons-en ensemble.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRODUCTION -->
+    <section class="contact-intro">
+
+        <div class="container">
+
+            <span class="section-label">CONTACTEZ-NOUS</span>
+
+            <h2>
+                Comment pouvons-nous
+                <span>vous accompagner ?</span>
+            </h2>
+
+            <p>
+                Notre équipe est à votre disposition pour échanger
+                sur vos besoins et vous orienter vers les prestations
+                adaptées à votre projet.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COORDONNÉES ET FORMULAIRE -->
+    <section class="contact-main">
+
+        <div class="container">
+
+            <!-- COORDONNÉES -->
+            <div class="contact-info">
+
+                <span class="section-label">NOS COORDONNÉES</span>
+
+                <h2>Restons en contact.</h2>
+
+                <p class="info-description">
+                    Retrouvez nos coordonnées et choisissez
+                    le moyen de communication qui vous convient.
+                </p>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">☎</div>
+
+                    <div>
+                        <h3>Téléphone</h3>
+                        <a href="tel:+237693524331">
+                            +237 693 52 43 31
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">⌖</div>
+
+                    <div>
+                        <h3>Adresse</h3>
+                        <p>
+                            Rua Bebey Eyidi,<br>
+                            Akwa, Douala, Cameroun.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">✉</div>
+
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <a
+                            href="https://wa.me/237693524331"
+                            target="_blank"
+                            rel="noopener">
+                            Discuter avec nous
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://wa.me/237693524331"
+                    target="_blank"
+                    rel="noopener"
+                    class="whatsapp-button">
+
+                    Contacter sur WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- FORMULAIRE -->
+            <div class="contact-form-container">
+
+                <div class="form-heading">
+
+                    <span class="section-label">
+                        ÉCRIVEZ-NOUS
+                    </span>
+
+                    <h2>Envoyez-nous un message.</h2>
+
+                    <p>
+                        Présentez-nous votre projet.
+                        Nous vous répondrons dès que possible.
+                    </p>
+
+                </div>
+
+
+                <form id="contactForm">
+
+                    <div class="form-group">
+
+                        <label for="nom">Nom complet</label>
+
+                        <input
+                            type="text"
+                            id="nom"
+                            name="nom"
+                            placeholder="Votre nom complet"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="telephone">Numéro de téléphone</label>
+
+                        <input
+                            type="tel"
+                            id="telephone"
+                            name="telephone"
+                            placeholder="Votre numéro de téléphone"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="service">Prestation souhaitée</label>
+
+                        <select id="service" name="service" required>
+
+                            <option value="">Choisir une prestation</option>
+
+                            <option value="Organisation de mariage">
+                                Organisation de mariage
+                            </option>
+
+                            <option value="Décoration événementielle">
+                                Décoration événementielle
+                            </option>
+
+                            <option value="Location de matériel">
+                                Location de matériel
+                            </option>
+
+                            <option value="Organisation d'événement">
+                                Organisation d'événement
+                            </option>
+
+                            <option value="Formation">
+                                Formation
+                            </option>
+
+                            <option value="Autre demande">
+                                Autre demande
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">Votre message</label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Décrivez votre projet..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="submit-button">
+                        Envoyer mon message
+                    </button>
+
+                    <p class="form-note">
+                        Votre message sera préparé dans WhatsApp
+                        pour être envoyé à notre équipe.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOCALISATION -->
+    <section class="contact-location">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">NOUS TROUVER</span>
+
+                <h2>
+                    Retrouvez-nous à
+                    <span>Douala.</span>
+                </h2>
+
+                <p>
+                    MPESSA FILS SARL est située à Akwa,
+                    dans la ville de Douala.
+                </p>
+
+            </div>
+
+            <div class="location-card">
+
+                <div class="location-placeholder">
+
+                    <div class="location-pin">⌖</div>
+
+                    <h3>MPESSA FILS SARL</h3>
+
+                    <p>
+                        Rua Bebey Eyidi, Akwa, Douala
+                    </p>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Rua+Bebey+Eyidi+Akwa+Douala"
+                        target="_blank"
+                        rel="noopener">
+
+                        Voir l'itinéraire
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 MPESSA FILS SARL.
+                Tous droits réservés.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/contact.js"></script>
+
+</body>
+</html>

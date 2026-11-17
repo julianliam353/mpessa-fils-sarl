@@ -1,0 +1,614 @@
+/* =========================================
+   MPESSA FILS SARL
+   FEUILLE DE STYLE PRINCIPALE
+========================================= */
+
+
+/* VARIABLES */
+
+:root {
+    --bleu: #28286A;
+    --bleu-fonce: #17173F;
+    --orange: #D95A20;
+    --orange-clair: #F07843;
+    --blanc: #FFFFFF;
+    --gris: #F4F4F6;
+    --gris-texte: #666666;
+    --noir: #222222;
+
+    --ombre: 0 8px 30px rgba(40, 40, 106, 0.10);
+
+    --transition: all 0.3s ease;
+}
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--noir);
+    background: var(--blanc);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* CONTENEUR GENERAL */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   EN-TÊTE ET NAVIGATION
+========================================= */
+
+.header {
+    width: 100%;
+    background: var(--blanc);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.navbar {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 145px;
+    height: 75px;
+    object-fit: contain;
+}
+
+
+/* MENU */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navigation a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--bleu);
+    position: relative;
+    transition: var(--transition);
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 3px;
+    background: var(--orange);
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.navigation a:hover {
+    color: var(--orange);
+}
+
+.navigation a:hover::after {
+    width: 100%;
+}
+
+
+/* BOUTON CONTACT */
+
+.btn-contact {
+    background: var(--orange);
+    color: var(--blanc);
+    padding: 13px 21px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.btn-contact:hover {
+    background: var(--bleu);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   SECTION PRINCIPALE
+========================================= */
+
+.hero {
+    min-height: 580px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 90px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(23, 23, 63, 0.96),
+            rgba(40, 40, 106, 0.82),
+            rgba(40, 40, 106, 0.30)
+        ),
+        url("../images/hero.jpg");
+
+    background-color: var(--bleu-fonce);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* CONTENU HERO */
+
+.hero-content {
+    max-width: 680px;
+    color: var(--blanc);
+}
+
+.hero-label {
+    display: inline-block;
+    color: var(--orange-clair);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.hero p {
+    max-width: 590px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 35px;
+    line-height: 1.9;
+}
+
+
+/* BOUTONS HERO */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 15px 25px;
+    background: var(--orange);
+    color: var(--blanc);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: var(--orange-clair);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 14px 24px;
+    border: 2px solid var(--blanc);
+    color: var(--blanc);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    background: var(--blanc);
+    color: var(--bleu);
+}
+
+
+/* =========================================
+   PRESENTATION
+========================================= */
+
+.presentation {
+    padding: 100px 0;
+    text-align: center;
+    background: var(--blanc);
+}
+
+.section-label {
+    display: block;
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.presentation h2,
+.services h2 {
+    color: var(--bleu);
+    font-size: clamp(27px, 4vw, 40px);
+    margin-bottom: 20px;
+}
+
+.presentation p {
+    max-width: 780px;
+    margin: 0 auto;
+    color: var(--gris-texte);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services {
+    padding: 100px 0;
+    background: var(--gris);
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 55px;
+}
+
+.service-card {
+    background: var(--blanc);
+    padding: 35px 22px;
+    border-radius: 10px;
+    box-shadow: var(--ombre);
+    transition: var(--transition);
+    border-bottom: 4px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-bottom-color: var(--orange);
+}
+
+.service-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+    background: rgba(217, 90, 32, 0.10);
+    color: var(--orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.service-card h3 {
+    color: var(--bleu);
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: var(--gris-texte);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   SECTION CONTACT
+========================================= */
+
+.contact-section {
+    padding: 90px 20px;
+    background: var(--bleu);
+    text-align: center;
+    color: var(--blanc);
+}
+
+.contact-section h2 {
+    max-width: 750px;
+    margin: 0 auto 18px;
+    font-size: clamp(26px, 4vw, 38px);
+}
+
+.contact-section p {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   PIED DE PAGE
+========================================= */
+
+.footer {
+    background: var(--bleu-fonce);
+    color: var(--blanc);
+    padding: 65px 0 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 150px;
+    height: 85px;
+    object-fit: contain;
+    margin: 0 auto 20px;
+    background: var(--blanc);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 35px;
+    padding-top: 20px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLETTES
+========================================= */
+
+@media screen and (max-width: 1000px) {
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .navigation a {
+        font-size: 12px;
+    }
+
+    .logo img {
+        width: 115px;
+    }
+
+    .btn-contact {
+        padding: 11px 14px;
+        font-size: 11px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - TELEPHONES
+========================================= */
+
+@media screen and (max-width: 700px) {
+
+    .container {
+        width: 92%;
+    }
+
+    /* EN-TÊTE */
+
+    .navbar {
+        min-height: auto;
+        padding: 12px 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        width: 115px;
+        height: 60px;
+    }
+
+    .btn-contact {
+        padding: 10px 13px;
+        font-size: 11px;
+    }
+
+    /* NAVIGATION */
+
+    .navigation {
+        order: 3;
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        gap: 22px;
+        padding: 12px 2px 8px;
+        scrollbar-width: none;
+    }
+
+    .navigation::-webkit-scrollbar {
+        display: none;
+    }
+
+    .navigation a {
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: 520px;
+        padding: 75px 6%;
+        background-position: center;
+    }
+
+    .hero-label {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        text-align: center;
+    }
+
+    /* PRESENTATION */
+
+    .presentation {
+        padding: 70px 0;
+    }
+
+    .presentation h2 {
+        font-size: 28px;
+    }
+
+    .presentation p {
+        font-size: 14px;
+    }
+
+    /* SERVICES */
+
+    .services {
+        padding: 70px 0;
+    }
+
+    .services h2 {
+        font-size: 28px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 35px;
+    }
+
+    .service-card {
+        padding: 30px 20px;
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+        padding: 70px 15px;
+    }
+
+    .contact-section h2 {
+        font-size: 27px;
+    }
+
+    .contact-section p {
+        font-size: 14px;
+    }
+
+    /* FOOTER */
+
+    .footer {
+        padding: 50px 0 20px;
+    }
+
+}
+
+
+/* =========================================
+   PETITS TELEPHONES
+========================================= */
+
+@media screen and (max-width: 380px) {
+
+    .logo img {
+        width: 95px;
+    }
+
+    .btn-contact {
+        padding: 9px 10px;
+        font-size: 10px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero {
+        min-height: 480px;
+    }
+
+}
+
+.main-nav a.active::after {
+    width: 100%;
+}
